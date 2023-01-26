@@ -1,10 +1,20 @@
-import './components/timer.css';
+import React, {useState} from 'react';
+import { Timer } from './components/Timer.js';
 
 function App() {
+
+  const [timerDays, setTimeDays] = useState()
+  const [timerHours, setTimeHours] = useState()
+  const [timerMinutes, setTimeMinutes] = useState()
+  const [timerSeconds, setTimeSeconds] = useState()
+
   return (
-    <div className='timer'>
-      <p>TIMER</p>
-    </div>
+    <Timer 
+    timerDays={timerDays} 
+    timerHours={timerHours}
+    timerMinutes={timerMinutes}
+    timerSeconds={timerSeconds}
+    />
   );
 }
 
